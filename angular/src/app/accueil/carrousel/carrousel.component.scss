@@ -1,7 +1,7 @@
 .carousel-item {
-    height: 300px;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre de visualisation */
     img {
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; /* Les images couvrent toute la zone du carrousel sans déformation */
     }
 }
