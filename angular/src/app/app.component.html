@@ -1,2 +1,31 @@
-<app-accueil></app-accueil>
-<router-outlet></router-outlet>
+<!-- app.component.html -->
+<header class="bg-success text-white text-center p-2">
+    <h1>Bienvenue sur l'application Rick et Morty</h1>
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/infos">Informations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/formulaire">Formulaire</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet> <!-- Le contenu dynamique sera chargé ici -->
+<footer class="bg-success text-white text-center p-2 fixed-bottom">
+    <p>© 2023 Tous droits réservés</p>
+</footer>
