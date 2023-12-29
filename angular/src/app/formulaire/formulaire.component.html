@@ -1,43 +1,46 @@
 <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-      <label for="nom" class="form-label">Nom</label>
-      <input type="text" class="form-control" id="nom" formControlName="nom">
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email" formControlName="email">
-    </div>
-    <div class="mb-3">
-      <label for="question1" class="form-label">Qui est le créateur de Rick et Morty?</label>
-      <select id="question1" formControlName="question1" class="form-control">
-        <option value="">Sélectionnez une réponse</option>
-        <option value="Justin Roiland">Justin Roiland</option>
-        <option value="Matt Groening">Matt Groening</option>
-        <option value="Trey Parker">Trey Parker</option>
-      </select>
-    </div>
-    <div class="mb-3">
-      <label for="question2" class="form-label">Quel est le nom du petit-fils de Rick?</label>
-      <select id="question2" formControlName="question2" class="form-control">
-        <option value="">Sélectionnez une réponse</option>
-        <option value="Morty">Morty</option>
-        <option value="Bart">Bart</option>
-        <option value="Stan">Stan</option>
-      </select>
-    </div>
-    <div class="mb-3">
-      <label for="question3" class="form-label">Dans quelle dimension vivent Rick et Morty?</label>
-      <select id="question3" formControlName="question3" class="form-control">
-        <option value="">Sélectionnez une réponse</option>
-        <option value="C-137">C-137</option>
-        <option value="C-132">C-132</option>
-        <option value="J-195">J-195</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-  </form>
-  <div *ngIf="submitted">
-    <h2>Résultats</h2>
-    <p>Vous avez obtenu {{ score }} sur 3.</p>
+  <div class="mb-3" [class.bg-success]="quizForm.controls['nom'].valid" [class.bg-danger]="quizForm.controls['nom'].invalid && quizForm.controls['nom'].touched">
+    <label for="nom" class="form-label">Nom</label>
+    <input type="text" class="form-control" id="nom" formControlName="nom">
   </div>
-  
+  <div class="mb-3" [class.bg-success]="quizForm.controls['email'].valid" [class.bg-danger]="quizForm.controls['email'].invalid && quizForm.controls['email'].touched">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email">
+  </div>
+  <div class="mb-3" [class.bg-success]="results.question1" [class.bg-danger]="submitted && !results.question1">
+    <label for="question1" class="form-label">Qui est le créateur de Rick et Morty?</label>
+    <select id="question1" formControlName="question1" class="form-control">
+      <option value="">Sélectionnez une réponse</option>
+      <option value="Justin Roiland">Justin Roiland</option>
+      <option value="Matt Groening">Matt Groening</option>
+      <option value="Trey Parker">Trey Parker</option>
+    </select>
+  </div>
+  <div class="mb-3" [class.bg-success]="results.question2" [class.bg-danger]="submitted && !results.question2">
+    <label for="question2" class="form-label">Quel est le nom du petit-fils de Rick?</label>
+    <select id="question2" formControlName="question2" class="form-control">
+      <option value="">Sélectionnez une réponse</option>
+      <option value="Morty">Morty</option>
+      <option value="Bart">Bart</option>
+      <option value="Stan">Stan</option>
+    </select>
+  </div>
+  <div class="mb-3" [class.bg-success]="results.question3" [class.bg-danger]="submitted && !results.question3">
+    <label for="question3" class="form-label">Dans quelle dimension vivent Rick et Morty?</label>
+    <select id="question3" formControlName="question3" class="form-control">
+      <option value="">Sélectionnez une réponse</option>
+      <option value="C-137">C-137</option>
+      <option value="C-132">C-132</option>
+      <option value="J-195">J-195</option>
+    </select>
+  </div>
+  <div class="mb-3" [class.bg-success]="quizForm.controls['saison'].valid" [class.bg-danger]="quizForm.controls['saison'].invalid && quizForm.controls['saison'].touched">
+    <label for="saison" class="form-label">Combien de saisons y a-t-il actuellement ?</label>
+    <mat-slider id="saison" formControlName="saison" min="1" max="7" step="1" thumbLabel tickInterval="1"></mat-slider>
+  </div>
+  <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
+<div *ngIf="submitted">
+  <h2>Résultats</h2>
+  <p>Vous avez obtenu {{ score }} sur 4.</p>
+</div>
