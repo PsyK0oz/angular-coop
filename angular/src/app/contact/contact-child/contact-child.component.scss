@@ -1,0 +1,9 @@
+/* contact-child.component.css */
+.contact-card .contact-details.hidden {
+    display: none;
+  }
+  
+  .contact-card:hover .contact-details.hidden {
+    display: block;
+  }
+  

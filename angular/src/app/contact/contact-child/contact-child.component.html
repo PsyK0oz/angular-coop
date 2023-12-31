@@ -1,9 +1,9 @@
 <!-- contact-child.component.html -->
-<div class="card" (click)="toggleDetails()">
+<div class="contact-card card">
     <img [src]="contact?.image" alt="{{ contact?.name }}" class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title">{{ contact?.name }}</h5>
-      <div *ngIf="showDetails">
+      <h2 class="card-title">{{ contact?.name }}</h2>
+      <div class="contact-details hidden" [@expandCollapse]="state">
         <p class="card-text">{{ contact?.email }}</p>
         <p class="card-text">{{ contact?.phone }}</p>
       </div>
