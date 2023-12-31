@@ -15,4 +15,9 @@ interface Contact {
 })
 export class ContactChildComponent {
   @Input() contact?: Contact;
+  showDetails = false;
+
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+  }
 }

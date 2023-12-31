@@ -1,2 +1,5 @@
 <!-- contact.component.html -->
-<app-contact-child *ngFor="let contact of contacts" [contact]="contact"></app-contact-child>
+<div class="row">
+    <app-contact-child *ngFor="let contact of contacts" [contact]="contact" class="col-sm-12 col-md-6 col-lg-4"></app-contact-child>
+  </div>
+  
