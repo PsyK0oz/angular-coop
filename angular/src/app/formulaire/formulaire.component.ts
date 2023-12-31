@@ -21,37 +21,32 @@ export class FormulaireComponent implements OnInit {
       question1: ['', Validators.required],
       question2: ['', Validators.required],
       question3: ['', Validators.required],
-      saison: [null, [Validators.required, Validators.min(1), Validators.max(7)]] // Ajoutez cette ligne pour la nouvelle question
+      couleur: ['', Validators.required]
     });
   }
 
   onSubmit() {
     this.submitted = true;
     this.score = 0;
-
+  
     if (this.quizForm.value.question1 === 'Justin Roiland') {
       this.score++;
-      this.results.question1 = true; // Ajoutez cette ligne
+      this.results.question1 = true;
     } else {
-      this.results.question1 = false; // Ajoutez cette ligne² 
+      this.results.question1 = false;
     }
     if (this.quizForm.value.question2 === 'Morty') {
       this.score++;
-      this.results.question2 = true; // Ajoutez cette ligne
+      this.results.question2 = true;
     } else {
-      this.results.question2 = false; // Ajoutez cette ligne
+      this.results.question2 = false;
     }
     if (this.quizForm.value.question3 === 'C-137') {
       this.score++;
-      this.results.question3 = true; // Ajoutez cette ligne
+      this.results.question3 = true;
     } else {
-      this.results.question3 = false; // Ajoutez cette ligne
-    }
-    if (this.quizForm.value.saison === 7) { // Ajoutez ce bloc pour la nouvelle question
-      this.score++;
-      this.results.saison = true;
-    } else {
-      this.results.saison = false;
+      this.results.question3 = false;
     }
   }
+  
 }

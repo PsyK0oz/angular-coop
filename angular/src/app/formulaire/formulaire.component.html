@@ -1,3 +1,19 @@
+<p>
+  Il était une fois, dans une dimension lointaine connue sous le nom de C-137, un scientifique excentrique nommé Rick. Rick était un inventeur brillant, connu pour ses gadgets et inventions incroyables. Cependant, il était aussi connu pour ses aventures folles avec son petit-fils, Morty.
+  </p>
+  
+  <p>
+  Un jour, Rick a décidé de créer une série télévisée basée sur leurs aventures. Il a fait appel à un créateur de talent, Justin Roiland, pour l'aider à réaliser cette tâche. Ensemble, ils ont créé "Rick et Morty", une série qui est rapidement devenue un phénomène culturel.
+  </p>
+  
+  <p>
+  Au fil des saisons, Rick et Morty ont affronté de nombreux ennemis, mais aucun n'a été aussi redoutable que Rick assassin. Cet adversaire rusé a toujours été un défi pour eux, apportant une tension et un drame supplémentaires à la série.
+  </p>
+  
+  <p>
+  Maintenant, chers participants, êtes-vous prêts à tester vos connaissances sur "Rick et Morty" ? Remplissez ce formulaire et voyons combien vous savez vraiment !
+  </p>
+  
 <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
   <div class="mb-3" [class.bg-success]="quizForm.controls['nom'].valid" [class.bg-danger]="quizForm.controls['nom'].invalid && quizForm.controls['nom'].touched">
     <label for="nom" class="form-label">Nom</label>
@@ -34,13 +50,9 @@
       <option value="J-195">J-195</option>
     </select>
   </div>
-  <div class="mb-3" [class.bg-success]="quizForm.controls['saison'].valid" [class.bg-danger]="quizForm.controls['saison'].invalid && quizForm.controls['saison'].touched">
-    <label for="saison" class="form-label">Combien de saisons y a-t-il actuellement ?</label>
-    <mat-slider id="saison" formControlName="saison" min="1" max="7" step="1" thumbLabel tickInterval="1"></mat-slider>
-  </div>
   <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
 <div *ngIf="submitted">
   <h2>Résultats</h2>
-  <p>Vous avez obtenu {{ score }} sur 4.</p>
+  <p>Vous avez obtenu {{ score }} sur 3.</p>
 </div>
