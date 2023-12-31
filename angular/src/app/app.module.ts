@@ -9,13 +9,17 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './contact/contact.component';
+import { ContactChildComponent } from './contact/contact-child/contact-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
     CarrouselComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    ContactComponent,
+    ContactChildComponent
   ],
   imports: [
     BrowserModule,
