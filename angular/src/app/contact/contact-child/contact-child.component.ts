@@ -7,6 +7,7 @@ interface Contact {
   email: string;
   phone: string;
   image: string;
+  details: string;
 }
 
 @Component({
@@ -33,5 +34,8 @@ export class ContactChildComponent {
   @HostListener('mouseleave')
   onMouseLeave() {
     this.state = 'collapsed';
+  }
+  showDetails() {
+    alert(this.contact?.details);
   }
 }
