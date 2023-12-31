@@ -11,6 +11,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
 import { ContactChildComponent } from './contact/contact-child/contact-child.component';
+import { ContactDetailComponent } from './contact/contact-detail/contact-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactChildComponent } from './contact/contact-child/contact-child.com
     CarrouselComponent,
     FormulaireComponent,
     ContactComponent,
-    ContactChildComponent
+    ContactChildComponent,
+    ContactDetailComponent
   ],
   imports: [
     BrowserModule,

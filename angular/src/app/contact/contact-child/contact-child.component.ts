@@ -1,14 +1,9 @@
 // contact-child.component.ts
 import { Component, Input, HostListener } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-
-interface Contact {
-  name: string;
-  email: string;
-  phone: string;
-  image: string;
-  details: string;
-}
+import { MatDialog } from '@angular/material/dialog';
+import { Contact } from '../contact.service';
+import { ContactDetailComponent } from '../contact-detail/contact-detail.component';
 
 @Component({
   selector: 'app-contact-child',
@@ -35,7 +30,11 @@ export class ContactChildComponent {
   onMouseLeave() {
     this.state = 'collapsed';
   }
+  constructor(public dialog: MatDialog) { }
   showDetails() {
-    alert(this.contact?.details);
+    this.dialog.open(ContactDetailComponent, {
+      data: this.contact
+    });
+
   }
 }
