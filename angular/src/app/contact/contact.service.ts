@@ -23,7 +23,7 @@ export class ContactService {
     },
     {
       name: 'Elisée',
-      email: 'email.de.votre.collègue@example.com',
+      email: 'elisee.brand@gmail.com',
       phone: '9876543210',
       image: 'assets/elipl.jpg',
       details: 'test',

@@ -1,5 +1,8 @@
 .carousel-item {
-    height: 100vh; /* Prend toute la hauteur de la fenêtre de visualisation */
+    width: 80%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
     img {
         height: 100%;
         object-fit: cover; /* Les images couvrent toute la zone du carrousel sans déformation */

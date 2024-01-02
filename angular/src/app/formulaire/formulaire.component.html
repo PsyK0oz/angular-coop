@@ -58,9 +58,14 @@
         </div>
         <button type="submit" class="btn btn-primary">Envoyer</button>
       </form>
+      <button (click)="delete()">Delete</button>
       <div *ngIf="submitted">
         <h2>Résultats</h2>
         <p>Vous avez obtenu {{ score }} sur 3.</p>
+        <h2>Voici le score des autres utilisateurs :</h2>
+        <ul>
+          <li *ngFor="let user of users">{{ user.name }} : {{ user.score }}/3</li>
+        </ul>
       </div>
     </div>
     <div class="col-md-4 order-md-3">
