@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './carrousel.component.scss'
 })
 export class CarrouselComponent {
+  
 
 }

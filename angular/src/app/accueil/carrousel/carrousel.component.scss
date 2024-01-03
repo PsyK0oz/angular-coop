@@ -1,10 +1,21 @@
 .carousel-item {
-    width: 80%;
+    width: 70%;
     height: auto;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 600px;
     img {
         height: 100%;
         object-fit: cover; /* Les images couvrent toute la zone du carrousel sans déformation */
     }
+}
+.carousel-control-prev{
+    // left: 15%;
+    color: black;
+    background-color: red;
+}
+.carousel-control-next{
+    // right: 15%;
+    color: black;
+    background-color: red;
 }

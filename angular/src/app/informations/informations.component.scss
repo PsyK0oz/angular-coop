@@ -1,0 +1,25 @@
+.personnage{
+    border: 3px solid black;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    margin: 3%;
+    cursor: pointer;
+
+    p{
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        color: #00e1ff;
+        bottom: -16px;
+        position: absolute;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+#Presentation{
+    margin: 5%;
+}

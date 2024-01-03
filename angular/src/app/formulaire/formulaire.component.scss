@@ -1,15 +1,23 @@
 form {
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  /* Styles pour les inputs valides */
-  .ng-valid[required], .ng-valid.required  {
-    border-left: 5px solid #42A948; /* vert */
-  }
-  
-  /* Styles pour les inputs invalides */
-  .ng-invalid:not(form)  {
-    border-left: 5px solid #a94442; /* rouge */
-  }
-  
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Styles pour les inputs valides */
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* vert */
+}
+
+/* Styles pour les inputs invalides */
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* rouge */
+}
+
+#intro{
+  margin: 5%;
+}
+
+.rickNoteImg {
+  height: 40px;
+  width: auto;
+}

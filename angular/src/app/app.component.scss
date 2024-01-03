@@ -1,3 +1,15 @@
+// creer une variable css da,s le fichier scss de app.component et l'utiliser dans le html de app.component.html 
+// pour eviter de dupliquer le code css dans les autres fichiers scss
+// exemple :
+// dans le fichier app.component.scss
+:root{
+    --footer-height: 100px;
+}
+
+footer{
+    height: 6vh;
+}
+    
 main{
-    min-height: 90vh;
+    min-height: 94vh;
 }

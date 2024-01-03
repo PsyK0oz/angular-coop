@@ -1,0 +1,127 @@
+<div id="Presentation">
+    <p class="text-justify">
+        Il était une fois, dans une dimension lointaine connue sous le nom de C-137, un scientifique excentrique nommé Rick. 
+        Rick était un inventeur brillant, connu pour ses gadgets et inventions incroyables. Cependant, il était aussi connu pour ses aventures folles avec son petit-fils, Morty.
+    </p>
+    
+    <p class="text-justify">
+        Un jour, Rick a décidé de créer une série télévisée basée sur leurs aventures. Il a fait appel à un créateur de talent, 
+        Justin Roiland, pour l'aider à réaliser cette tâche. Ensemble, ils ont créé "Rick et Morty", une série qui est rapidement devenue un phénomène culturel.
+    </p>
+    
+    <p class="text-justify">
+        Au fil des saisons, Rick et Morty ont affronté de nombreux ennemis, mais aucun n'a été aussi redoutable que Rick assassin. 
+        Cet adversaire rusé a toujours été un défi pour eux, apportant une tension et un drame supplémentaires à la série.
+    </p>
+    
+
+</div>
+<!-- centrer un element en bootstrap : -->
+<h3 class="d-flex justify-content-center">Personnages principaux:</h3>
+<div id="personnages" class="d-flex flex-wrap justify-content-around">  
+
+    <span id="beth" class="personnage" (click)="openDialogue(bethDialogue)">
+        <img src="\assets\perosnnages\beth.webp" alt="">
+        <p>Beth Smith</p>
+    </span>
+
+    <ng-template #bethDialogue>
+        <h2 matDialogTitle>Bethany Smith (Sanchez)</h2>
+        <mat-dialog-content>
+            <p><b>Bethany "Beth" Sanchez</b> est la fille de Rick et Diane Sanchez, la femme de Jerry Smith, 
+                et la mère de Summer Smith et du défunt Morty Smith. Elle est actuellement la mère et la fille 
+                de Morty Smith et Rick Sanchez de la dimension Cronenberged et de la Dimension C-137, respectivement. 
+                Elle travaille également comme vétérinaire à l'hôpital St. Equis.
+            </p>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+            <button mat-button matDialogClose color="primary">Dismiss</button>
+        </mat-dialog-actions>
+    </ng-template>
+
+    <span id="summer" class="personnage" (click)="openDialogue(SummerDialogue)">
+        <img src="\assets\perosnnages\summer.webp" alt="">
+        <p>Summer Smith</p>
+    </span>
+
+    <ng-template #SummerDialogue>
+        <h2 matDialogTitle>Summer Smith</h2>
+        <mat-dialog-content>
+            <p><b>Summer Smith</b> de la Dimension C-131 est le tritagoniste de Rick et Morty. Membre de la famille Smith, 
+                elle est la fille de Jerry Smith et de Beth Smith/Space Beth, la sœur aînée de Morty Smith et la mère de Naruto Smith.
+                She currently acts as the older sister and the granddaughter of the Morty and Rick, respectively, from the Cronenberged 
+                Dimension and Dimension C-137. For a time, she was the only other known member of the the Smith Family to be aware of that 
+                fact. Although in "Solaricks" the whole family finds out that Rick and Morty are from another universe.
+            </p>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+            <button mat-button matDialogClose color="primary">Dismiss</button>
+        </mat-dialog-actions>
+    </ng-template>
+
+    <span id="rick" class="personnage" (click)="openDialogue(rickDialogue)">
+        <img src="\assets\perosnnages\rick.webp" alt="">
+        <p>Rick Sanchez</p>
+    </span>
+
+    <ng-template #rickDialogue>
+        <h2 matDialogTitle>Rick Sanchez</h2>
+        <mat-dialog-content>
+            <p><b>Richard "Rick" Sanchez </b>est un scientifique mégagène dont l'alcoolisme et le comportement irréfléchi et 
+                nihiliste sont des sources d'inquiétude pour la famille de sa "fille", ainsi que pour la sécurité de leur fils, 
+                Morty. Dès le début de la série, les origines mystérieuses de Rick et sa santé mentale ont fait l'objet de nombreuses spéculations.
+            </p>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+            <button mat-button matDialogClose color="primary">Dismiss</button>
+        </mat-dialog-actions>
+    </ng-template>
+
+    <span id="morty" class="personnage" (click)="openDialogue(mortyDialogue)">
+        <img src="\assets\perosnnages\morty.webp" alt="">
+        <p>Morty Smith</p>
+    </span>
+
+    <ng-template #mortyDialogue>
+        <h2 matDialogTitle>Morty Smith</h2>
+        <mat-dialog-content>
+            <p><b>Mortimer Chauncey "Morty" Smith Sr.</b> est le petit-fils de Rick Sanchez et est souvent forcé de l'accompagner dans ses 
+                diverses mésaventures en tant qu'acolyte alors qu'il fréquente le lycée Harry Herpson avec sa sœur Summer. Au début de la série, 
+                Morty était montré comme un adolescent incroyablement anxieux et soumis. Il n'avait pas vraiment son mot à dire dans les aventures 
+                qu'il vivait avec Rick et était souvent agressé verbalement et manipulé par ce dernier. Cependant, Morty a fini par prendre 
+                de l'assurance au fil du temps et est désormais plus capable et indépendant qu'un simple acolyte. Cette nouvelle confiance 
+                a également permis à Morty de s'éloigner plus souvent de Rick en raison de ses tendances méprisables, même si Morty reste 
+                à ses côtés lorsque c'est nécessaire.
+            </p>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+            <button mat-button matDialogClose color="primary">Dismiss</button>
+        </mat-dialog-actions>
+    </ng-template>
+
+    <span id="jerry" class="personnage" (click)="openDialogue(jerryDialogue)">
+        <img src="\assets\perosnnages\jerry.webp" alt="">
+        <p>Jerry Smith</p>
+    </span>
+
+    <ng-template #jerryDialogue>
+        <h2 matDialogTitle>Jerry Smith</h2>
+        <mat-dialog-content>
+            <p><b>Jerry Smith</b> is often noted as somewhat of a loser. He constantly attempts to find a career to no avail, 
+                leaving his wife Beth to be the breadwinner of the family. However, he is capable of heroism in times of crisis and has 
+                saved his family's lives on a few occasions. Jerry's marriage to Beth is often rocky and unstable, resulting in the two 
+                finally getting a divorce in the Season 3 premiere. Jerry would spend most of the season living alone and depressed in a 
+                small apartment, until he and Beth reconcile in the Season 3 finale, although it's currently unknown if the Beth he re-married 
+                is a clone or the original Beth.
+            </p>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+            <button mat-button matDialogClose color="primary">Dismiss</button>
+        </mat-dialog-actions>
+    </ng-template>
+
+</div>
+
+
+
+ 

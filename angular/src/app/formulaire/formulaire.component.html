@@ -1,26 +1,21 @@
-<p class="text-justify">
-  Il était une fois, dans une dimension lointaine connue sous le nom de C-137, un scientifique excentrique nommé Rick. Rick était un inventeur brillant, connu pour ses gadgets et inventions incroyables. Cependant, il était aussi connu pour ses aventures folles avec son petit-fils, Morty.
+<p id="intro">
+  Maintenant que vous avez fait le tour du site, chers participants, êtes-vous prêts à tester vos connaissances sur "Rick et Morty" ? Remplissez ce formulaire et voyons combien vous savez vraiment !
 </p>
-  
-<p class="text-justify">
-  Un jour, Rick a décidé de créer une série télévisée basée sur leurs aventures. Il a fait appel à un créateur de talent, Justin Roiland, pour l'aider à réaliser cette tâche. Ensemble, ils ont créé "Rick et Morty", une série qui est rapidement devenue un phénomène culturel.
-</p>
-  
-<p class="text-justify">
-  Au fil des saisons, Rick et Morty ont affronté de nombreux ennemis, mais aucun n'a été aussi redoutable que Rick assassin. Cet adversaire rusé a toujours été un défi pour eux, apportant une tension et un drame supplémentaires à la série.
-</p>
-  
-<p class="text-justify">
-  Maintenant, chers participants, êtes-vous prêts à tester vos connaissances sur "Rick et Morty" ? Remplissez ce formulaire et voyons combien vous savez vraiment !
-</p>
-
 <div class="container">
   <div class="row">
-    <div class="col-md-4 order-md-1">
+
+    <div class="col-md-4 order-md-1" *ngIf="!submitted">
       <img src="assets/rick.png" alt="Rick" class="img-fluid">
     </div>
+    <div class="col-md-4 order-md-1" *ngIf="scoreDecevent">
+      <img src="assets/rickTeteGauche.png" alt="Rick" class="img-fluid">
+    </div>
+    <div class="col-md-4 order-md-1" *ngIf="!scoreDecevent && submitted">
+      <img src="assets/rickHeureux.png" alt="Rick" class="img-fluid">
+    </div>
+
     <div class="col-md-4 order-md-2">
-      <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="quizForm" (ngSubmit)="onSubmit()" *ngIf="!submitted">
         <div class="mb-3" [class.bg-success]="quizForm.controls['nom'].valid" [class.bg-danger]="quizForm.controls['nom'].invalid && quizForm.controls['nom'].touched">
           <label for="nom" class="form-label">Nom</label>
           <input type="text" class="form-control" id="nom" formControlName="nom">
@@ -56,20 +51,51 @@
             <option value="J-195">J-195</option>
           </select>
         </div>
+        <div class="mb-3" [class.bg-success]="results.question4" [class.bg-danger]="submitted && !results.question4">
+          <label for="question4" class="form-label">Combien de batiment(s) rick fait il exploser dans l'épisode "Pickle Rick" ?</label>
+          <select id="question4" formControlName="question4" class="form-control">
+            <option value="">Sélectionnez une réponse</option>
+            <option value="1batiment">1 batiment</option>
+            <option value="3batiments">3 batiments</option>
+            <option value="10batiments">+ de 10 batiments</option>
+          </select>
+        </div>
+        <div class="mb-3" [class.bg-success]="results.question5" [class.bg-danger]="submitted && !results.question5">
+          <label for="question5" class="form-label">Qu'est ce qui est anormal dans le générique de l'épisode "total rickall" ?</label>
+          <select id="question5" formControlName="question5" class="form-control">
+            <option value="">Sélectionnez une réponse</option>
+            <option value="Jerry">Le fait que Jerry n'ai pas son chapeau</option>
+            <option value="Poopybutthole">La présence de M. Poopybutthole</option>
+            <option value="Summer">La présence du poster de cheval dans la chambre de Summer</option>
+          </select>
+        </div>
         <button type="submit" class="btn btn-primary">Envoyer</button>
       </form>
-      <button (click)="delete()">Delete</button>
+
+      <button (click)="delete()">Delete</button> <!-- test -->
+
+
       <div *ngIf="submitted">
         <h2>Résultats</h2>
-        <p>Vous avez obtenu {{ score }} sur 3.</p>
+        <p>Vous avez obtenu {{ score }} sur {{reponses.length}}.</p>
+        <p>Votre score : <span [innerHTML]="score | userScore"></span>({{ score }}/{{reponses.length}})</p>
+        <button (click)="actualiserLaPage()">Recommencer le test !</button>
         <h2>Voici le score des autres utilisateurs :</h2>
         <ul>
-          <li *ngFor="let user of users">{{ user.name }} : {{ user.score }}/3</li>
+          <li *ngFor="let user of users">{{ user.name }} : <span [innerHTML]="user.score | userScore"></span>({{ user.score }}/{{reponses.length}})</li>
+          <!-- <li *ngFor="let user of users">{{ user.name }} : {{ user.score | userScore}}/3</li> -->
         </ul>
       </div>
     </div>
-    <div class="col-md-4 order-md-3">
+    <div class="col-md-4 order-md-3" *ngIf="!submitted">
       <img src="assets/morty.png" alt="Morty" class="img-fluid">
     </div>
+    <div class="col-md-4 order-md-3" *ngIf="scoreDecevent">
+      <img src="assets/rickTeteDroite.png" alt="Rick" class="img-fluid">
+    </div>
+    <div class="col-md-4 order-md-3" *ngIf="!scoreDecevent && submitted">
+      <img src="assets/mortyHeureux.png" alt="Rick" class="img-fluid">
+    </div>
+    
   </div>
 </div>
