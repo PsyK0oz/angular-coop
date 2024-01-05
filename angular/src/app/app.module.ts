@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule,HAMMER_GESTURE_CONFIG, HammerModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +22,6 @@ import { UserScorePipe } from './shares/user-score.pipe';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgChartsModule } from 'ng2-charts';
-import { Chart } from 'chart.js';
 
 @NgModule({
   declarations: [

@@ -1,10 +1,5 @@
-// import { Component } from '@angular/core';
-
-
 import { MatDialog } from '@angular/material/dialog';
 import { Component, TemplateRef } from '@angular/core';
-// import { DialogContentComponent } from './dialog-content.component';
-
 
 @Component({
   selector: 'app-informations',
@@ -15,6 +10,7 @@ export class InformationsComponent {
   constructor(public dialog: MatDialog) {}
 
 
+  // Fonction pour ouvrir la boite de dialogue (popup)
   openDialogue(templateRef: TemplateRef<any>) {
     this.dialog.open(templateRef);
   }

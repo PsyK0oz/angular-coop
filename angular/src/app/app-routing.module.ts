@@ -9,9 +9,9 @@ import { EpisodesComponent } from './episodes/episodes.component';
 const routes: Routes = [
   { path: '', component: AccueilComponent, pathMatch: 'full' }, // Route d'accueil
   { path: 'formulaire', component: FormulaireComponent }, // Route du formulaire
-  { path: 'contact', component: ContactComponent },
-  { path: 'informations', component: InformationsComponent },
-  { path: 'episodes', component: EpisodesComponent }
+  { path: 'contact', component: ContactComponent }, // Route de contact
+  { path: 'informations', component: InformationsComponent }, // Route d'informations
+  { path: 'episodes', component: EpisodesComponent } // Route des épisodes
 ];
 
 @NgModule({

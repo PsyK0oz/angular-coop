@@ -5,16 +5,18 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-4 order-md-1" *ngIf="!submitted">
+    <!-- Images qui s'affichent ou non en fonction de la situation -->
+    <div class="col-md-4 order-md-1" *ngIf="!submitted"> <!-- Ici tant que le formulaire n'est pas envoyé -->
       <img src="assets/rick.png" alt="Rick" class="img-fluid">
     </div>
-    <div class="col-md-4 order-md-1" *ngIf="scoreDecevent">
+    <div class="col-md-4 order-md-1" *ngIf="scoreDecevent">  <!-- Ici si le score de la personne est décevant (<4) -->
       <img src="assets/rickTeteGauche.png" alt="Rick" class="img-fluid">
     </div>
-    <div class="col-md-4 order-md-1" *ngIf="!scoreDecevent && submitted">
+    <div class="col-md-4 order-md-1" *ngIf="!scoreDecevent && submitted"> <!-- et ici sile score est bon -->
       <img src="assets/rickHeureux.png" alt="Rick" class="img-fluid">
     </div>
 
+    <!-- Formulaire avec appel à la fonction "OnSubmit" lorsque ce dernier est renvoyé -->
     <div class="col-md-4 order-md-2">
       <form [formGroup]="quizForm" (ngSubmit)="onSubmit()" *ngIf="!submitted">
         <div class="mb-3" [class.bg-success]="quizForm.controls['nom'].valid" [class.bg-danger]="quizForm.controls['nom'].invalid && quizForm.controls['nom'].touched">
@@ -25,6 +27,7 @@
           <label for="email" class="form-label">Email</label>
           <input type="email" class="form-control" id="email" formControlName="email">
         </div>
+        <!-- Les 5 questions à choix multiples -->
         <div class="mb-3" [class.bg-success]="results.question1" [class.bg-danger]="submitted && !results.question1">
           <label for="question1" class="form-label">Qui est le créateur de Rick et Morty?</label>
           <select id="question1" formControlName="question1" class="form-control">
@@ -71,27 +74,30 @@
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Envoyer</button> 
-        <!-- verifier que tous les champs ont été remplis -->
+        <!-- verifier que tous les champs ont été remplis sinon afficher ce texte -->
         <div *ngIf="quizForm.invalid">
           <p class="text-danger">Veuillez remplir tous les champs</p>
         </div>
       </form>
 
-      <button (click)="delete()">Delete</button> <!-- test -->
+      <button (click)="delete()">Delete</button> <!-- test A SUPRIMERR-->
 
-
+      <!-- Affichage des résultats -->
       <div *ngIf="submitted">
         <h2>Résultats</h2>
         <p>Vous avez obtenu {{ score }} sur {{reponses.length}}.</p>
+        <!-- Utilise un pipe pour transformer les données de score en image -->
         <p>Votre score : <br><span class="score" [innerHTML]="score | userScore"></span>({{ score }}/{{reponses.length}})</p>
+        <!-- Bouton qui appelle la fonction d'actualisation de la page pour retenter sa chance -->
         <button (click)="actualiserLaPage()">Recommencer le test !</button>
         <h2 *ngIf="">Voici le score des autres utilisateurs :</h2>
         <ul>
           <li *ngFor="let user of users">{{ user.name }} : <span [innerHTML]="user.score | userScore"></span>({{ user.score }}/{{reponses.length}})</li>
-          <!-- <li *ngFor="let user of users">{{ user.name }} : {{ user.score | userScore}}/3</li> -->
+          <!-- Affiche le score de tous les utilisateurs enregistrés -->
         </ul>
       </div>
     </div>
+    <!-- Images qui s'affichent ou non en fonction de la situation -->
     <div class="col-md-4 order-md-3" *ngIf="!submitted">
       <img src="assets/morty.png" alt="Morty" class="img-fluid">
     </div>
