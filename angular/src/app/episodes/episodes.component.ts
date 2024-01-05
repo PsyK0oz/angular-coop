@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Episode, EPISODES } from '../models/episodes.model';
 
 @Component({
@@ -7,10 +7,6 @@ import { Episode, EPISODES } from '../models/episodes.model';
   styleUrl: './episodes.component.scss'
 })
 export class EpisodesComponent {
+  // Récuperation du tableau avec les épisodes
   episodes: Episode[] = EPISODES;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 }

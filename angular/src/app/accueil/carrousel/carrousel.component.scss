@@ -1,9 +1,7 @@
 .carousel-item {
-    // width: 70%;
     height: auto;
     left: 50%;
     transform: translateX(-50%);
-    // max-width: 600px;
     img {
         height: 100%;
         object-fit: cover; /* Les images couvrent toute la zone du carrousel sans déformation */
@@ -12,8 +10,6 @@
 #carouselExampleIndicators{
     width: 100%;
     max-width: 600px;
-    // left: 50%;
-    // transform: translateX(-50%);
     :hover .carousel-control-prev, :hover .carousel-control-next{
         background-color: #00000088;
     }
@@ -33,6 +29,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+// media querries pour le responsive
 @media (max-width: 600px) {
     #container{
         grid-template-columns: repeat(1, 1fr);

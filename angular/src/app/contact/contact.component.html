@@ -1,11 +1,6 @@
 <div id="contacts" class="row">
     <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let contact of contacts">
-      <!-- en bootstrap cela signifie 
-      que sur un écran small, le contact prendra 12 colonnes,
-      sur un écran medium, le contact prendra 6 colonnes,
-      sur un écran large, le contact prendra 4 colonnes
-
-      -->
+      <!-- Montre tous les contacts enregistrés dans contact.service.ts -->
       <app-contact-child [contact]="contact"></app-contact-child>
     </div>
 </div>

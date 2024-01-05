@@ -10,6 +10,7 @@ import { Contact, ContactService } from './contact.service';
 export class ContactComponent {
   contacts: Contact[];
 
+  // Permet d'injecter le service ContactService dans le composant et de l'utiliser
   constructor(private contactService: ContactService) {
     this.contacts = this.contactService.getContacts();
   }

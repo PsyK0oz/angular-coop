@@ -13,6 +13,7 @@ export interface Contact {
   providedIn: 'root'
 })
 export class ContactService {
+  // Liste des contacts avec leurs informations 
   contacts: Contact[] = [
     {
       name: 'Pierre-Luc',
@@ -39,7 +40,7 @@ export class ContactService {
     }
   ];
 
-  getContacts(): Contact[] {
+  getContacts(): Contact[] { // Permet de récupérer les contacts
     return this.contacts;
   }
 }
