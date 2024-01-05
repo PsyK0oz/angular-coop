@@ -32,9 +32,9 @@ export class ContactService {
       email: 'elisee.brand@gmail.com',
       phone: '+33 4 56 78 91 01',
       image: 'assets/elipl.jpg',
-      details: 'Moi c\'est Élisée, j\aime également beaucoup la série Rick et Morty. J\'ai regardé chaque saison mais pas autant que Pierre Luc. \
+      details: 'Moi c\'est Élisée, j\'aime également beaucoup la série Rick et Morty. J\'ai regardé chaque saison mais pas autant que Pierre Luc. \
       Je ne comprend pas toutes les références mais cela ne me dérange pas je suis simplement là pour poser mon cerveau et rire un peu.\
-      Mon personagge préféré est également Rick, c\'est d\'ailleurs pour son côté décalé que Pé èl est mon ami. Je suis d\'ailleurs très heureux de \
+      Mon personage préféré est également Rick, c\'est d\'ailleurs pour son côté décalé que Pé èl est mon ami. Je suis d\'ailleurs très heureux de \
       faire ce projet avec lui. Je vous souhaite une bonne visite sur notre site ! :)\
       Voici mes coordonnées :',
     }

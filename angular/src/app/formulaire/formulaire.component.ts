@@ -127,7 +127,7 @@ export class FormulaireComponent implements OnInit {
     }
   }
 
-  actualiserLaPage (){ // Actualiser la page pour recommencer le quiz
+  actualiserLaPage (){ // Actualiser la page pour recommencer le formulaire
     location.reload();
   }
 }

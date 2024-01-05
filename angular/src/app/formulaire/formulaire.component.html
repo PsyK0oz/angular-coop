@@ -7,13 +7,13 @@
 
     <!-- Images qui s'affichent ou non en fonction de la situation -->
     <div class="col-md-4 order-md-1" *ngIf="!submitted"> <!-- Ici tant que le formulaire n'est pas envoyé -->
-      <img src="assets/rick.png" alt="Rick" class="img-fluid">
+      <img src="assets/rick.png" alt="Rick content" class="img-fluid">
     </div>
     <div class="col-md-4 order-md-1" *ngIf="scoreDecevent">  <!-- Ici si le score de la personne est décevant (<4) -->
-      <img src="assets/rickTeteGauche.png" alt="Rick" class="img-fluid">
+      <img src="assets/rickTeteGauche.png" alt="Rick dégouté" class="img-fluid">
     </div>
     <div class="col-md-4 order-md-1" *ngIf="!scoreDecevent && submitted"> <!-- et ici sile score est bon -->
-      <img src="assets/rickHeureux.png" alt="Rick" class="img-fluid">
+      <img src="assets/rickHeureux.png" alt="Rick très heureux" class="img-fluid">
     </div>
 
     <!-- Formulaire avec appel à la fonction "OnSubmit" lorsque ce dernier est renvoyé -->
@@ -99,13 +99,13 @@
     </div>
     <!-- Images qui s'affichent ou non en fonction de la situation -->
     <div class="col-md-4 order-md-3" *ngIf="!submitted">
-      <img src="assets/morty.png" alt="Morty" class="img-fluid">
+      <img src="assets/morty.png" alt="Morty content" class="img-fluid">
     </div>
     <div class="col-md-4 order-md-3" *ngIf="scoreDecevent">
-      <img src="assets/rickTeteDroite.png" alt="Rick" class="img-fluid">
+      <img src="assets/rickTeteDroite.png" alt="Rick dégouté" class="img-fluid">
     </div>
     <div class="col-md-4 order-md-3" *ngIf="!scoreDecevent && submitted">
-      <img src="assets/mortyHeureux.png" alt="Rick" class="img-fluid">
+      <img src="assets/mortyHeureux.png" alt="Morty très heureux" class="img-fluid">
     </div>
     
   </div>
