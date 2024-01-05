@@ -1,4 +1,3 @@
-// contact-child.component.ts
 import { Component, Input, HostListener } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';
