@@ -1,3 +1,8 @@
+//Ce fichier TypeScript définit le composant ContactChildComponent. 
+//Ce composant prend en entrée un objet contact de type Contact. 
+//Il définit également une animation expandCollapse qui change l’état de collapsed à expanded lorsque l’utilisateur survole la carte de contact. 
+//Lorsque l’utilisateur clique sur l’image de la carte de contact, la méthode showDetails() est appelée, qui ouvre un dialogue contenant 
+//le composant ContactDetailComponent avec les détails du contact.
 import { Component, Input, HostListener } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';

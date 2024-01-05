@@ -1,3 +1,9 @@
+<!--
+  Ce fichier HTML définit une carte de contact avec une image, 
+  un nom et des détails de contact. L’image et le nom sont toujours visibles, 
+  tandis que les détails du contact sont cachés par défaut et s’affichent lorsque 
+  l’état de l’animation expandCollapse est expanded.
+-->
 <div class="contact-card card">
     <img [src]="contact?.image" alt="{{ contact?.name }}" class="card-img-top" (click)="showDetails()">
     <div class="card-body">
