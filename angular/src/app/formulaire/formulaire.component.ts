@@ -15,6 +15,7 @@ export class FormulaireComponent implements OnInit {
   users: any = [];
   reponses: any = [];
   scoreDecevent = false;
+  aucunAutreJoueur = true;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -27,7 +28,6 @@ export class FormulaireComponent implements OnInit {
       question3: ['', Validators.required],
       question4: ['', Validators.required],
       question5: ['', Validators.required],
-      couleur: ['', Validators.required]
     });
   }
 
@@ -35,6 +35,10 @@ export class FormulaireComponent implements OnInit {
     localStorage.clear();
   }
   onSubmit() {
+    
+    if (this.quizForm.valid) {
+      // Procéder à la soumission du formulaire
+    
     this.reponses = [
       'Justin Roiland',
       'Morty',
@@ -81,10 +85,6 @@ export class FormulaireComponent implements OnInit {
       this.scoreDecevent = true;
     }
 
-    
-    
-
-
     // const users = [];
     this.users = [];
     for (let i = 0; i < localStorage.length; i++) {
@@ -98,6 +98,11 @@ export class FormulaireComponent implements OnInit {
         let score = valueJson.score;
         this.users.push({ name: name, score: score });
       }
+    }
+
+    // permet de ne pas montrer la partie des autres joueurs si il n'y en a pas
+    if (localStorage.length <= 1) {
+      this.aucunAutreJoueur = false;
     }
 
 
@@ -117,12 +122,11 @@ export class FormulaireComponent implements OnInit {
     let indexUsers = localStorage.length;
     // Stocker les données JSON dans le LocalStorage
     localStorage.setItem(indexUsers.toString(), formDataJson);
+  } else {
+    console.log("test")
   }
-
-
+  }
   actualiserLaPage (){
     location.reload();
   }
-
-
 }

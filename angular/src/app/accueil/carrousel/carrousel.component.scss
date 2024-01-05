@@ -12,17 +12,41 @@
 #carouselExampleIndicators{
     width: 100%;
     max-width: 600px;
-    left: 50%;
-    transform: translateX(-50%);
+    // left: 50%;
+    // transform: translateX(-50%);
+    :hover .carousel-control-prev, :hover .carousel-control-next{
+        background-color: #00000088;
+    }
+}
+#MortyDétouré{
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+#RickDétouré{
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
-}
-.carousel-control-prev{
-    // left: 15%;
-    color: black;
-    background-color: rgb(0, 0, 0);
-}
-.carousel-control-next{
-    // right: 15%;
-    color: black;
-    background-color: rgb(0, 0, 0);
+@media (max-width: 600px) {
+    #container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #carouselExampleIndicators{
+        max-width: 100%;
+    }
+    #RickDétouré{
+        width: 100%;
+        display: none;
+    }
+    #MortyDétouré{
+        width: 100%;
+        display: none;
+    }
+    
 }
