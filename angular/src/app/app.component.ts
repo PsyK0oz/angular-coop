@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'angular';
+  title = '<Rick et Morty>';
 }
 

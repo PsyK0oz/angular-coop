@@ -1,0 +1,27 @@
+<app-charts></app-charts>
+<!-- <div *ngFor="let episode of episodes">
+    <h2>{{episode.titre}}</h2>
+    <p>Saison {{episode.saison}}, Épisode {{episode.episode}}</p>
+    <p>Durée : {{episode.duree}} minutes</p>
+</div> -->
+<br>
+<h2 id="titre">Liste des épisodes des 5 premières saisons :</h2>
+<br>
+<table id="tableauEpisodes" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Episode n° (hors saison)</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Saison, n°</th>
+        <th scope="col">Audience Américaine (en million)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let episode of episodes">
+        <th scope="row">{{episode.episodeTotal}}</th>
+        <td>{{episode.titre}}</td>
+        <td>Saison : {{episode.saison}}, Épisode : {{episode.episode}}</td>
+        <td>{{episode.audienceUSA}}</td>
+      </tr>
+    </tbody>
+  </table>
